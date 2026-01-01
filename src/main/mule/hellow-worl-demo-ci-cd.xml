@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="f8dfa831-f1a7-43e6-936d-4c8f3a79e83b" >
+		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="7dfd279f-f4d5-4a03-af32-dcc2615126a3" file="properties\dev.yaml" />
+	<flow name="hellow-worl-demo-ci-cdFlow" doc:id="bb610489-5cde-4b8b-b83d-a5625cdbcc8a" >
+		<http:listener doc:name="Listener" doc:id="a00a9d34-d3c9-413e-9486-1b0f6b0edc31" config-ref="HTTP_Listener_config" path="/ci-cd-demo"/>
+		<ee:transform doc:name="Transform Message" doc:id="fece79de-75d5-459c-9c9d-8c4d183dfbbe" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"status": "sucess",
+	"message": "hello world ci-cd pipeline demo successful"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger- end" doc:id="a3e2122d-8ba6-4b17-a448-f24967b5d135" message="#[payload]"/>
+	</flow>
+</mule>
