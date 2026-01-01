@@ -35,9 +35,9 @@
 				        <provider>MC</provider>  
 				        <environment>Sandbox</environment>  
 				        <target>Cloudhub-US-East-2</target>
-						<muleVersion>4.4.0</muleVersion>
+						<muleVersion>4.10.1</muleVersion>
 						<server>anypoint-exchange-v3</server>
-				        <applicationName>hellow-worl-demo-ci-cd-sandbox-v1-2026-1</applicationName>        
+				        <applicationName>hellow-worl-demo-ci-cd-sandbox-v003-api</applicationName>        
 				        <replicas>1</replicas>
 				        <vCores>0.1</vCores>
 						<skipDeploymentVerification>${skipDeploymentVerification}</skipDeploymentVerification>
