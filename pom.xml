@@ -4,7 +4,7 @@
 
 	<groupId>7099690f-cf4a-4d31-9e97-d1b9cdb5092a</groupId>
 	<artifactId>hellow-worl-demo-ci-cd</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>mule-application</packaging>
 
 	<name>hellow-worl-demo-ci-cd</name>
