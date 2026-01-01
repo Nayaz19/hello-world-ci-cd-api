@@ -4,7 +4,7 @@
 
 	<groupId>7099690f-cf4a-4d31-9e97-d1b9cdb5092a</groupId>
 	<artifactId>hellow-worl-demo-ci-cd</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
 	<name>hellow-worl-demo-ci-cd</name>
@@ -37,7 +37,7 @@
 				        <target>Cloudhub-US-East-2</target>
 						<muleVersion>4.10.1</muleVersion>
 						<server>anypoint-exchange-v3</server>
-				        <applicationName>hellow-worl-demo-ci-cd-sandbox-dev-v1-112026-2</applicationName>        
+				        <applicationName>hellow-worl-demo-ci-cd-sandbox-dev-v1-112026-snap</applicationName>        
 				        <replicas>1</replicas>
 				        <vCores>0.1</vCores>
 						<skipDeploymentVerification>${skipDeploymentVerification}</skipDeploymentVerification>
