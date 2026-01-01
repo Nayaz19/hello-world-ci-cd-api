@@ -2,7 +2,7 @@ name: Build and Deploy Mule App to CloudHub 2.0 Sandbox
 
 on:
   push:
-    branches: [ main ]
+    branches: [ none ]
   workflow_dispatch:
 
 jobs:
