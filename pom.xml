@@ -35,7 +35,7 @@
 						<provider>MC</provider>
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
-						<muleVersion>4.10.1</muleVersion>
+						<muleVersion>4.11.0</muleVersion>
 						<server>anypoint-exchange-v3</server>
 						<applicationName>hellow-worl-demo-ci-cd-sbx-142-snap</applicationName>
 						<replicas>1</replicas>
